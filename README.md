@@ -65,9 +65,8 @@ void setDac(uint8_t ctrl, uint16_t code = 0x00);
 Set a DAC output where 'ctrl' is address/control and 'code' is the DAC output.
 
 'address/control' Table:
-|--------------------------------------------------------------------------|
 | 'ctrl' 		 | Literals | DAC Status 				  |  Sleep Status  |
-|--------------------------------------------------------------------------|
+|----------------|----------|-----------------------------|----------------|
 |  0x00  		 | DAC_WAKE | No Change  				  | WAKE           |
 |  0x01  		 | DAC_A    | Load DAC A 				  | WAKE		   |
 |  0x02  		 | DAC_B    | Load DAC B 				  | WAKE		   |
@@ -80,7 +79,7 @@ Set a DAC output where 'ctrl' is address/control and 'code' is the DAC output.
 |  0x09 to 0x0D  |    -     | No Change					  | WAKE		   |
 |  0x0E    	     | DAC_SLP  | No Change                   | SLEEP		   |
 |  0x0F          | DAC_ALL  | Load All DACs with same code| WAKE 		   |
-|--------------------------------------------------------------------------|
+|----------------|----------|-----------------------------|----------------|
 
 **^For LTC1660: 'code' parameter shouldn't exceed 255, otherwise will be set back to 255.**<br>
 **^For LTC1665: 'code' parameter shouldn't exceed 1023, otherwise will be set back to 1023.**
