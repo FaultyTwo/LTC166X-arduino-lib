@@ -21,11 +21,9 @@
 
 class LTC166X{
    public:
+      // Initial a LTC166X
       void begin(SPIClass &spi = SPI);
-      // add beginTransactions method here later
-      // 1660 use 12-bit data
-      // 1665 use 8-bit data
-      // class seperation? yes.
+      // Configure the SPI transaction options.
       void beginTransactionConfig(uint32_t _clock, uint8_t _bitOrder, uint8_t _dataMode);
    protected:
       int _cs;
@@ -36,12 +34,14 @@ class LTC166X{
 class LTC1660 : public LTC166X{
   public:
       LTC1660(int cs);
+      // Set a DAC output.
       void setDac(uint8_t ctrl, uint16_t code = 0x00); 
 };
 
 class LTC1665 : public LTC166X{
   public:
       LTC1665(int cs);
+      // Set a DAC output.
       void setDac(uint8_t ctrl, uint8_t code = 0x00); 
 };
 
