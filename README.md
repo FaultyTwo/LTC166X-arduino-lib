@@ -1,8 +1,8 @@
 # LTC166X
-An Arduino library for LTC1660 and LTC1665, Octal 8-bit and 10-bit DACs.
+Arduino library for LTC1660 and LTC1665, Octal 8-bit and 10-bit DACs.
 
 ## Overview
-LTC166X is an Arduino library for controlling LTC1660 (Octal 8-bit DACs) and LTC1665 (Octal 10-bit DACs).
+LTC166X is Arduino library for controlling LTC1660 (Octal 8-bit DACs) and LTC1665 (Octal 10-bit DACs).
 
 Both ICs contain 8 DACs (A to H) which can be interfaced with SPI protocol.
 
@@ -41,7 +41,7 @@ void setup(){
 	ten.begin(&esp)
 }
 ```
-**^Note that each boards use different SPI pinout. Make sure to check that before coding.**<br>
+**^Each board has different SPI pins layout. Make sure to check before coding.**<br>
 
 # Methods
 ```C
@@ -57,12 +57,12 @@ void beginTransactionConfig(uint32_t _clock, uint8_t _bitOrder, uint8_t _dataMod
 ```
 Configure the SPI transaction options.
 
-For more info. Check 'SPISettings' in Arduino website.
+For more info. Check ['SPISettings'](https://www.arduino.cc/reference/en/language/functions/communication/spi/spisettings/) in Arduino website.
 
 ```C
-void setDac(uint8_t ctrl, uint16_t code = 0x00);
+void setDac(uint8_t ctrl, uint16_t dac_value = 0x00);
 ```
-Set a DAC output where 'ctrl' is address/control and 'code' is the DAC output.
+Set a DAC output where **'ctrl'** is the address/control code and **'dac_value'** is the DAC output.
 
 'address/control' Table:
 | 'ctrl' 		 | Literals | DAC Status 				  |  Sleep Status  |

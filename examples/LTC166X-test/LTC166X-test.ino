@@ -1,9 +1,9 @@
 /* LTC166X-test
  * Author: Chawin 'FaultyTwo' Treesugol
- * Date: 6/26/2022
- * FROM: LINK TO GITHUB REPO
+ * Date: 10/08/2024
+ * FROM: https://github.com/FaultyTwo/LTC166X-arduino-lib
  * 
- * Desc: This is a sketch for testing each LTC1660 or LTC1665 DACs.
+ * Desc: This is a sketch for testing DAC outputs in LTC1660 or LTC1665.
  * 
  * Enjoy!
  */

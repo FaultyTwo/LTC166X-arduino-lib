@@ -7,7 +7,7 @@ LTC1660::LTC1660(int cs){
   digitalWrite(_cs,HIGH);
 }
 
-void LTC1660::setDac(uint8_t ctrl, uint16_t code){
+void LTC1660::setDac(uint8_t ctrl, uint16_t dac_value){
   // implement beginTransaction later
   
   uint8_t data[1];
