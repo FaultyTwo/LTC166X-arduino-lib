@@ -34,6 +34,7 @@ class LTC166X{
       void beginTransactionConfig(uint32_t _clock, uint8_t _bitOrder, uint8_t _dataMode);
       /// @brief Configure a SPI transaction of a LTC166X device
       /// @param _setting An instance of "SPISettings" class
+      /// @note https://www.arduino.cc/reference/en/language/functions/communication/spi/spisettings/
       void beginTransactionConfig(SPISettings _setting);
    protected:
       int _cs;
@@ -49,7 +50,7 @@ class LTC1660 : public LTC166X{
       LTC1660(int cs);
       ///@brief Set a DAC output
       ///@param ctrl The address/control code
-      ///@param code The value of DAC output
+      ///@param dac_value The value of DAC output
       void setDac(uint8_t ctrl, uint16_t dac_value = 0x00); 
 };
 
@@ -61,7 +62,7 @@ class LTC1665 : public LTC166X{
       LTC1665(int cs);
       ///@brief Set a DAC output
       ///@param ctrl The address/control code
-      ///@param code The value of DAC output
+      ///@param dac_value The value of DAC output
       void setDac(uint8_t ctrl, uint8_t dac_value = 0x00); 
 };
 
