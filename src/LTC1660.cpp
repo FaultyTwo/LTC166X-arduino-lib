@@ -16,12 +16,12 @@ void LTC1660::setDac(uint8_t ctrl, uint16_t dac_value){
     ctrl = 0x00;
   }
   
-  if(code > 1023){ //10-bit limit
-    code = 1023;
+  if(dac_value > 1023){ //10-bit limit
+    dac_value = 1023;
   }
   
-  data[0] = (ctrl << 4) | (code >> 6); // 
-  data[1] = (code << 2);
+  data[0] = (ctrl << 4) | (dac_value >> 6); // 
+  data[1] = (dac_value << 2);
 
   _spi->beginTransaction(setting);
   digitalWrite(_cs,LOW);

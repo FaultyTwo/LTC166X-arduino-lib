@@ -16,12 +16,12 @@ void LTC1665::setDac(uint8_t ctrl, uint8_t dac_value){
     ctrl = 0x00;
   }
   
-  if(code > 255){ //8-bit limit
-    code = 255;
+  if(dac_value > 255){ //8-bit limit
+    dac_value = 255;
   }
   
-  data[0] = (ctrl << 4) | (code >> 4); // 
-  data[1] = (code << 4);
+  data[0] = (ctrl << 4) | (dac_value >> 4);
+  data[1] = (dac_value << 4);
 
   _spi->beginTransaction(setting);
   digitalWrite(_cs,LOW);

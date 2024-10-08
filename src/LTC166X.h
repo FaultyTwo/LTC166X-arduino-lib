@@ -1,6 +1,6 @@
 /* 
    LTC166X - Arduino library for LTC1660 and LTC1665, Octal 8-bit and 10-bit DACs.
-   By: Chawin 'FaultyTwo' Treesugol
+   By: Chawin 'FaultyTwo' Treesugol <https://github.com/FaultyTwo/LTC166X-arduino-lib>
 */
 
 #ifndef ft_LTC166X
